@@ -22,13 +22,14 @@ public class WishMessageGenerator {
 		this.date = date;
     }
 
-    public void setDate(Date date){
-        System.out.println("setter injected TO INJECT DATE OBJECT :: " + date);
-        this.date = date;
-    }
+//    public void setDate(Date date){
+//        System.out.println("setter injected TO INJECT DATE OBJECT :: " + date);
+//        this.date = date;
+//    }
     public String getMessage(String name){
         System.out.println("getMessage method started.....");
-        int hour = date.getHours();
+        @SuppressWarnings("deprecation")
+		int hour = date.getHours();
 
         if (hour<=12)
             return "hello "+ name +" Good Morning " ;

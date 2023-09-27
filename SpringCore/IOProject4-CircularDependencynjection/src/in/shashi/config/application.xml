@@ -5,34 +5,35 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!-- Configuring DEPENDANT bean using Setter injection -->
-	<!-- <bean id="a1" class="in.ineuron.bean.A">
+	<!-- <bean id="a1" class="in.shashi.bean.A">
 		<property name='b' ref='b1'/>
 	</bean>	 -->
 	
 	<!-- Configuring DEPENDANT bean using Setter injection -->
-	<!-- <bean id="b1" class='in.ineuron.bean.B'>
+	<!-- <bean id="b1" class='in.shashi.bean.B'>
 		<property name='a' ref='a1'/>		
 	</bean> -->
 	
 	<!-- Configuring  DEPENDANT bean using constructor injection -->
-	<!-- <bean id="a1" class="in.ineuron.bean.A">
+	 <bean id="a1" class="in.shashi.bean.A">
 		<constructor-arg name="b" ref='b1'/> 
-	</bean> -->
+	</bean> 
 	
 	<!-- Configuring  DEPENDANT bean using constructor injection -->
-	<!-- <bean id="b1" class="in.ineuron.bean.B">
+	<!-- <bean id="b1" class="in.shashi.bean.B">
 		<constructor-arg name="a" ref='a1'/> 
 	</bean> -->
 	
 	
 	<!-- Configuring DEPENDANT bean using Setter injection -->
-	<bean id="a1" class="in.shashi.bean.A">
+	<!--  <bean id="a1" class="in.shashi.bean.A">
 		<property name='b' ref='b1'/> 
-	</bean>
+	</bean>  -->
 	
 	<!-- Configuring  DEPENDANT bean using constructor injection -->
-	<bean id="b1" class="in.shashi.bean.B">
+	 <bean id="b1" class="in.shashi.bean.B">
 		<constructor-arg name="a" ref='a1'/> 
-	</bean> 
+	</bean>     
+	
 
 </beans>

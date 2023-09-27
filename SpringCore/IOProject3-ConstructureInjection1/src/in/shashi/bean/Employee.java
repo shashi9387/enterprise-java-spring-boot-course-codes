@@ -15,7 +15,6 @@ public class Employee {
 		}
 		
 		public Employee(int eno, String ename , String eaddress , float esalary) {
-			System.out.println("");
 			this.ename=ename;
 			this.eaddress=eaddress;
 			this.eno=eno;

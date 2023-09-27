@@ -5,14 +5,14 @@ import org.springframework.core.io.FileSystemResource;
 
 import in.shashi.bean.Employee;
 
+@SuppressWarnings("deprecation")
 public class TestApp {
 
     public static void main(String[] args) {
 
         FileSystemResource resource = new FileSystemResource("./src/application.xml");
 
-        @SuppressWarnings("deprecation")
-		XmlBeanFactory factory = new XmlBeanFactory(resource);
+        XmlBeanFactory factory = new XmlBeanFactory(resource);
 
         Employee employee = factory.getBean("emp", Employee.class);
         

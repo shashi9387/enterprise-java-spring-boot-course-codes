@@ -16,7 +16,7 @@
         id="wmg"
         class="in.shashi.bean.WishMessageGenerator" >
         <constructor-arg name="date" ref="dt1"/>
-        <property name="date" ref="dt"/>
+         <constructor-arg name="date" ref="dt"/> 
     </bean>
 
 </beans>
