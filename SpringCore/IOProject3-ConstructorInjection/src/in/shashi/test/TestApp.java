@@ -1,29 +1,22 @@
 package in.shashi.test;
 
-import in.shashi.bean.WishMessageGenerator;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.FileSystemResource;
 
+import in.shashi.bean.Employee;
 
-import java.nio.file.FileSystems;
-
+@SuppressWarnings("deprecation")
 public class TestApp {
 
     public static void main(String[] args) {
 
-        FileSystemResource resource = new FileSystemResourse("../src/application.xml");
+        FileSystemResource resource = new FileSystemResource("./src/application.xml");
 
-        XmlBeanFactory factory = new XmlBeanFactory(resourse);
+        XmlBeanFactory factory = new XmlBeanFactory(resource);
 
-        WishMessageGenerator generator1 = factroy.getBean("wmg",WishMessageGenerator.class);
-        WishMessageGenerator generator2 = factory.getBean("wmg", WishMessgeGenerator.class);
-
-        System.out.println("Generator1 class object reference :: "+generator1.hashCode());
-        System.out.println("Generator2 class object reference :: "+generator2.hashCode());
-
-        System.out.println("   ");
-
-        String result = generator1.getMessage("Shashi");
-        System.out.println(result);
+        Employee employee = factory.getBean("emp", Employee.class);
+        
+        System.out.println(employee);
     }
 }
 

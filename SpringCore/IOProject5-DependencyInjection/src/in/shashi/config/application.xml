@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
-
-
-    <bean
-        id="a1"
-        class="in.shashi.bean.A" >
-                <property name="b" ref="b1" />
-    </bean>
         
-
-    <bean
-        id="b1"
-        class="in.shashi.bean.B" >
-        <property name="a" ref="a1" />
-    </bean>
-
+        
+        <bean id = "p1" class = "in.shashi.bean.Person">
+        <constructor-arg name = "pname" value= "ShashiKumar" />
+        <constructor-arg name = "pid" value= "776080" />
+        <constructor-arg name = "paddress" value= "Bokaro,Jharkhand" />
+        <constructor-arg name = "pincome" value= "25300.57" />
+        </bean>
+        
+        <bean id = "p2" class = "in.shashi.bean.Person">
+        <property name = "pname" value = "Shashi" />
+        <property name = "pid" value = "776080" />
+        <property name = "paddress" value = "Bokaro" />
+        <property name = "pincome" value = "24700.34" />
+        </bean>
+        
 </beans>
+

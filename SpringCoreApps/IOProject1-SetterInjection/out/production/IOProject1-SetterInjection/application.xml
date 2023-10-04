@@ -4,10 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id = "emp" class="in.shashi.bean.Employee">
-		<constructor-arg value="MI" name='eaddress'/>
-		<constructor-arg value="sachin"  name='ename'/>
-		<constructor-arg value="3500.05F" name='esalary'/>
-		<constructor-arg value="10"  name='eno'/>
-	</bean>
+
+    <bean
+        id="dt"
+        class="java.util.Date" />
+
+    <bean
+        id="wmg"
+        class="in.shashi.bean.WishMessageGenerator" >
+        <property name="date" ref="dt" />
+    </bean>
+
 </beans>
